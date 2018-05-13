@@ -1,0 +1,11 @@
+Z:\VB.Net Game\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.exe
+Z:\VB.Net Game\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.pdb
+Z:\VB.Net Game\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.xml
+Z:\VB.Net Game\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbprojResolveAssemblyReference.cache
+Z:\VB.Net Game\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.Form1.resources
+Z:\VB.Net Game\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.Resources.resources
+Z:\VB.Net Game\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbproj.GenerateResource.Cache
+Z:\VB.Net Game\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbproj.CoreCompileInputs.cache
+Z:\VB.Net Game\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.exe
+Z:\VB.Net Game\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.xml
+Z:\VB.Net Game\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.pdb
