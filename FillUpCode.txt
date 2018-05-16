@@ -1,0 +1,20 @@
+'Fill up code 
+Dim a As Player
+    Structure Player
+        Dim fillweaponsarr() As String
+        Sub FillWeapons()
+            ReDim fillweaponsarr(3)
+            Dim str As String
+
+            FileOpen(1, "D:\lmao.txt", OpenMode.Input)
+            Dim i As Long
+            i = 1
+            Do While Not EOF(1)
+                str = LineInput(1)
+                fillweaponsarr(i) = str
+                i = i + 1
+            Loop
+
+
+        End Sub
+    End Structure
