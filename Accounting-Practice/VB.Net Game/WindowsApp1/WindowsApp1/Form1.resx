@@ -121,24 +121,27 @@
     <value>17, 17</value>
   </metadata>
   <metadata name="tmrLeft.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>106, 17</value>
+    <value>166, 18</value>
   </metadata>
   <metadata name="tmrUp.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>195, 17</value>
+    <value>301, 25</value>
   </metadata>
   <metadata name="tmrDown.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>284, 17</value>
+    <value>449, 17</value>
   </metadata>
   <metadata name="timLShoot.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>386, 17</value>
+    <value>621, 24</value>
   </metadata>
   <metadata name="timRshoot.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>489, 17</value>
+    <value>790, 20</value>
   </metadata>
   <metadata name="timDshoot.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>597, 17</value>
+    <value>971, 16</value>
   </metadata>
   <metadata name="timUshoot.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>706, 17</value>
+    <value>1176, 14</value>
+  </metadata>
+  <metadata name="timLaserCol.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1323, 14</value>
   </metadata>
 </root>

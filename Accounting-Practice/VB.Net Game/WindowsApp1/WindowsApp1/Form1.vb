@@ -23,6 +23,7 @@
         objects(1) = Me.PictureBox2
         objects(2) = Me.PictureBox3
         objects(3) = Me.PictureBox4
+        i = 0
     End Sub
     Structure laser
 
@@ -89,6 +90,24 @@
                 Ushoot = False
                 Lshoot = False
                 Rshoot = False
+            Case Keys.Space
+                If Lshoot = True Then
+                    timLShoot.Enabled = True
+                    lblLaser.Visible = True
+                End If
+                If Rshoot = True Then
+                    timRshoot.Enabled = True
+                    lblLaser.Visible = True
+                End If
+                If Ushoot = True Then
+                    timUshoot.Enabled = True
+                    lblLaser.Visible = True
+                End If
+                If Dshoot = True Then
+                    timDshoot.Enabled = True
+                    lblLaser.Visible = True
+                End If
+
         End Select
     End Sub
 
@@ -217,11 +236,75 @@
     End Sub
 
     Private Sub timLShoot_Tick(sender As Object, e As EventArgs) Handles timLShoot.Tick
-        If i < 10 Then
-            lblLaser.Left += 5
-        Else
+        If i <= 30 Then
+            lblLaser.Left -= 5
+            i = i + 1
+        End If
+        If i = 31 Then
             lblLaser.Visible = False
+            lblLaser.Top = Ply.Top
+            lblLaser.Left = Ply.Left
+            i = i + 1
+        End If
+        If i = 32 Then
+            i = 0
             timLShoot.Enabled = False
         End If
+    End Sub
+
+    Private Sub timRshoot_Tick(sender As Object, e As EventArgs) Handles timRshoot.Tick
+        If i <= 30 Then
+            lblLaser.Left += 5
+            i = i + 1
+        End If
+        If i = 31 Then
+            lblLaser.Visible = False
+            lblLaser.Top = Ply.Top
+            lblLaser.Left = Ply.Left
+            i = i + 1
+        End If
+        If i = 32 Then
+            i = 0
+            timRshoot.Enabled = False
+        End If
+    End Sub
+
+    Private Sub timDshoot_Tick(sender As Object, e As EventArgs) Handles timDshoot.Tick
+        If i <= 30 Then
+            lblLaser.Top += 5
+            i = i + 1
+        End If
+        If i = 31 Then
+            lblLaser.Visible = False
+            lblLaser.Top = Ply.Top
+            lblLaser.Left = Ply.Left
+            i = i + 1
+        End If
+        If i = 32 Then
+            i = 0
+            timDshoot.Enabled = False
+        End If
+    End Sub
+
+    Private Sub timUshoot_Tick(sender As Object, e As EventArgs) Handles timUshoot.Tick
+        If i <= 30 Then
+            lblLaser.Top -= 5
+            i = i + 1
+        End If
+        If i = 31 Then
+            lblLaser.Visible = False
+            lblLaser.Top = Ply.Top
+            lblLaser.Left = Ply.Left
+            i = i + 1
+        End If
+        If i = 32 Then
+            i = 0
+            timUshoot.Enabled = False
+        End If
+    End Sub
+
+    Private Sub timLaserCol_Tick(sender As Object, e As EventArgs) Handles timLaserCol.Tick
+        For x = 0 To objects.Length - 1
+            If lblLaser.Bounds.IntersectsWith( Then
     End Sub
 End Class
