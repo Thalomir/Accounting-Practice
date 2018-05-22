@@ -1,11 +1,14 @@
 ﻿Public Class Form1
-    Dim Avatar As player
-    Dim objects() As PictureBox = {PictureBox1, PictureBox2, PictureBox3, PictureBox4}
+
+
+    Public Avatar As player
+    Dim objects() As PictureBox = {PictureBox1, PictureBox2, PictureBox3, PictureBox4, PictureBox5, PictureBox6, PictureBox7, PictureBox8, PictureBox9, PictureBox10, PictureBox11, ArenaEntrance}
     Public Collisions(55) As Sides
     Dim Rshoot As Boolean
     Dim Lshoot As Boolean
     Dim Ushoot As Boolean
     Dim Dshoot As Boolean
+    Dim arrTankWeapons(3)
     Dim D As Integer
     Dim U As Integer
     Dim L As Integer
@@ -13,17 +16,26 @@
     Dim c As Integer
     Dim bullet As laser
     Dim i As Integer
+    Dim col As Integer
+
 
 
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim i As Integer
+        Dim str As String
         Me.AutoScroll = False
         objects(0) = Me.PictureBox1
         objects(1) = Me.PictureBox2
         objects(2) = Me.PictureBox3
         objects(3) = Me.PictureBox4
         i = 0
+        col = 0
+
+
+
+
     End Sub
     Structure laser
 
@@ -55,6 +67,8 @@
         Dim Right As Double
         Dim Top As Double
         Dim Bottom As Double
+        Dim Gender As String
+        Dim SubType As String
 
     End Structure
 
@@ -125,14 +139,14 @@
     End Sub
 
     Private Sub tmrRight_Tick(sender As Object, e As EventArgs) Handles tmrRight.Tick
-        Dim objects() As PictureBox = {PictureBox1, PictureBox2, PictureBox3, PictureBox4}
+        Dim objects() As PictureBox = {PictureBox1, PictureBox2, PictureBox3, PictureBox4, PictureBox5, PictureBox6, PictureBox7, PictureBox8, PictureBox9, PictureBox10, PictureBox11, ArenaEntrance}
 
         For x = 0 To objects.Length - 1
             objects(x).Left -= 3
         Next
 
         For x = 0 To objects.Length - 1
-            If Ply.Bounds.IntersectsWith(objects(x).Bounds) Then
+            If Ply.Bounds.IntersectsWith(objects(x).Bounds) And objects(x).Name <> ArenaEntrance.Name Then
                 c += 1
             End If
         Next
@@ -148,7 +162,7 @@
     End Sub
 
     Private Sub tmrLeft_Tick(sender As Object, e As EventArgs) Handles tmrLeft.Tick
-        Dim objects() As PictureBox = {PictureBox1, PictureBox2, PictureBox3, PictureBox4}
+        Dim objects() As PictureBox = {PictureBox1, PictureBox2, PictureBox3, PictureBox4, PictureBox5, PictureBox6, PictureBox7, PictureBox8, PictureBox9, PictureBox10, PictureBox11, ArenaEntrance}
 
 
         For x = 0 To objects.Length - 1
@@ -156,7 +170,7 @@
         Next
 
         For x = 0 To objects.Length - 1
-            If Ply.Bounds.IntersectsWith(objects(x).Bounds) Then
+            If Ply.Bounds.IntersectsWith(objects(x).Bounds) And objects(x).Name <> ArenaEntrance.Name Then
                 c += 1
             End If
         Next
@@ -172,14 +186,14 @@
     End Sub
 
     Private Sub tmrUp_Tick(sender As Object, e As EventArgs) Handles tmrUp.Tick
-        Dim objects() As PictureBox = {PictureBox1, PictureBox2, PictureBox3, PictureBox4}
+        Dim objects() As PictureBox = {PictureBox1, PictureBox2, PictureBox3, PictureBox4, PictureBox5, PictureBox6, PictureBox7, PictureBox8, PictureBox9, PictureBox10, PictureBox11, ArenaEntrance}
 
         For x = 0 To objects.Length - 1
             objects(x).Top += 3
         Next
 
         For x = 0 To objects.Length - 1
-            If Ply.Bounds.IntersectsWith(objects(x).Bounds) Then
+            If Ply.Bounds.IntersectsWith(objects(x).Bounds) And objects(x).Name <> ArenaEntrance.Name Then
                 c += 1
             End If
         Next
@@ -195,14 +209,14 @@
     End Sub
 
     Private Sub tmrDown_Tick(sender As Object, e As EventArgs) Handles tmrDown.Tick
-        Dim objects() As PictureBox = {PictureBox1, PictureBox2, PictureBox3, PictureBox4}
+        Dim objects() As PictureBox = {PictureBox1, PictureBox2, PictureBox3, PictureBox4, PictureBox5, PictureBox6, PictureBox7, PictureBox8, PictureBox9, PictureBox10, PictureBox11, ArenaEntrance}
 
         For x = 0 To objects.Length - 1
             objects(x).Top -= 3
         Next
 
         For x = 0 To objects.Length - 1
-            If Ply.Bounds.IntersectsWith(objects(x).Bounds) Then
+            If Ply.Bounds.IntersectsWith(objects(x).Bounds) And objects(x).Name <> ArenaEntrance.Name Then
                 c += 1
             End If
         Next
@@ -304,7 +318,46 @@
     End Sub
 
     Private Sub timLaserCol_Tick(sender As Object, e As EventArgs) Handles timLaserCol.Tick
+
         For x = 0 To objects.Length - 1
-            If lblLaser.Bounds.IntersectsWith( Then
+            If lblLaser.Bounds.IntersectsWith(objects(x).Bounds) Then
+                col += 1
+            End If
+        Next
+
+        If col > 0 Then
+            lblLaser.Visible = False
+            lblLaser.Top = Ply.Top
+            lblLaser.Left = Ply.Left
+            col = 0
+            timDshoot.Enabled = False
+            timUshoot.Enabled = False
+            timLShoot.Enabled = False
+            timRshoot.Enabled = False
+        End If
+
+    End Sub
+
+    Private Sub timArenaCol_Tick(sender As Object, e As EventArgs) Handles timArenaCol.Tick
+
+        If Ply.Bounds.IntersectsWith(ArenaEntrance.Bounds) Then
+
+            Arena.Show()
+            Arena.Character.ImageLocation = Ply.ImageLocation
+            Ply.Top = 339
+            Ply.Left = 199
+            Me.Hide()
+
+        End If
+
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs)
+
+
+    End Sub
+
+    Private Sub PictureBox13_Click(sender As Object, e As EventArgs)
+
     End Sub
 End Class

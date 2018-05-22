@@ -69,11 +69,24 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CharSelect.Designer.vb">
+      <DependentUpon>CharSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CharSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Declarations.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Arena.Designer.vb">
+      <DependentUpon>Arena.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Arena.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -93,8 +106,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CharSelect.resx">
+      <DependentUpon>CharSelect.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Arena.resx">
+      <DependentUpon>Arena.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
