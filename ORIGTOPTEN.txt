@@ -1,0 +1,76 @@
+   Dim f As Integer
+        Dim b As Integer
+        Dim howmany As Integer
+        Dim temp As Player
+        howmany = 10
+        i = 0
+        Dim r As Long = 1
+        path1 = "D:\top.txt"
+        FileOpen(1, path1, OpenMode.Input)
+        Do While Not EOF(1)
+
+
+            top10players(r) = LineInput(1)
+
+
+            r = r + 1
+
+        Loop
+        FileClose(1)
+        For r = 1 To 10
+
+            NAMES(r) = Mid(top10players(r), 1, 1) & Mid(top10players(r), 2, 1) & Mid(top10players(r), 3, 1) & Mid(top10players(r), 4, 1) & Mid(top10players(r), 5, 1)
+
+
+        Next r
+
+        For r = 1 To 10
+
+            prescore = Mid(top10players(r), 7, 1) + Mid(top10players(r), 8, 1) + Mid(top10players(r), 9, 1) + Mid(top10players(r), 10, 1)
+            SCORES(r) = Val(prescore)
+
+
+        Next
+
+        For r = 1 To 10
+            players(r).name = NAMES(r)
+            players(r).endingscore = SCORES(r)
+
+
+        Next
+
+
+
+
+        If player1.endingscore > players(10).endingscore Then
+            players(10).name = player1.name
+            players(10).endingscore = player1.endingscore
+            For f = 1 To (howmany - 1)
+                For b = f + 1 To howmany
+                    If players(f).endingscore < players(b).endingscore Then
+                        temp = players(f)
+                        players(f) = players(b)
+                        players(b) = temp
+                    End If
+                Next b
+            Next f
+
+
+
+
+
+            FileOpen(1, path1, OpenMode.Output)
+            For r = 1 To 10
+
+                PrintLine(1, players(r).name & " " & players(r).endingscore & "   ")
+
+            Next r
+            FileClose(1)
+
+
+            For r = 1 To 10
+
+                ListBox1.Items.Add(players(r).name & " " & players(r).endingscore)
+
+            Next
+        End If
