@@ -1,0 +1,3 @@
+GreatAxe
+Shotgun
+LongSword

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Arena
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Arena
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -28,11 +28,7 @@ Partial Class Arena
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.Character = New System.Windows.Forms.PictureBox()
-        Me.Laser1 = New System.Windows.Forms.PictureBox()
-        Me.Laser2 = New System.Windows.Forms.PictureBox()
-        Me.Laser3 = New System.Windows.Forms.PictureBox()
-        Me.Laser4 = New System.Windows.Forms.PictureBox()
-        Me.Laser5 = New System.Windows.Forms.PictureBox()
+        Me.lblLaser = New System.Windows.Forms.PictureBox()
         Me.tmrLeft = New System.Windows.Forms.Timer(Me.components)
         Me.tmrRight = New System.Windows.Forms.Timer(Me.components)
         Me.tmrUp = New System.Windows.Forms.Timer(Me.components)
@@ -41,39 +37,36 @@ Partial Class Arena
         Me.timRshoot = New System.Windows.Forms.Timer(Me.components)
         Me.timUshoot = New System.Windows.Forms.Timer(Me.components)
         Me.timDshoot = New System.Windows.Forms.Timer(Me.components)
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox10 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox12 = New System.Windows.Forms.PictureBox()
+        Me.picEnemy1 = New System.Windows.Forms.PictureBox()
+        Me.picEnemy4 = New System.Windows.Forms.PictureBox()
+        Me.picEnemy3 = New System.Windows.Forms.PictureBox()
+        Me.picEnemy2 = New System.Windows.Forms.PictureBox()
+        Me.tmrOpp1 = New System.Windows.Forms.Timer(Me.components)
+        Me.tmrOpp2 = New System.Windows.Forms.Timer(Me.components)
+        Me.tmrOpp3 = New System.Windows.Forms.Timer(Me.components)
+        Me.tmrOpp4 = New System.Windows.Forms.Timer(Me.components)
+        Me.tmrOppLasers = New System.Windows.Forms.Timer(Me.components)
+        Me.ArenaExit = New System.Windows.Forms.PictureBox()
+        Me.tmrExitCol = New System.Windows.Forms.Timer(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Character, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Laser1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Laser2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Laser3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Laser4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Laser5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblLaser, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picEnemy1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picEnemy4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picEnemy3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picEnemy2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ArenaExit, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.PictureBox1.Location = New System.Drawing.Point(-216, -174)
+        Me.PictureBox1.Location = New System.Drawing.Point(-77, -172)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(2247, 222)
@@ -112,8 +105,8 @@ Partial Class Arena
         '
         'Character
         '
-        Me.Character.BackColor = System.Drawing.Color.White
-        Me.Character.Location = New System.Drawing.Point(782, 480)
+        Me.Character.BackColor = System.Drawing.Color.Transparent
+        Me.Character.Location = New System.Drawing.Point(572, 362)
         Me.Character.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Character.Name = "Character"
         Me.Character.Size = New System.Drawing.Size(93, 155)
@@ -121,160 +114,143 @@ Partial Class Arena
         Me.Character.TabIndex = 4
         Me.Character.TabStop = False
         '
-        'Laser1
+        'lblLaser
         '
-        Me.Laser1.BackColor = System.Drawing.Color.Red
-        Me.Laser1.Location = New System.Drawing.Point(782, 480)
-        Me.Laser1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Laser1.Name = "Laser1"
-        Me.Laser1.Size = New System.Drawing.Size(15, 15)
-        Me.Laser1.TabIndex = 5
-        Me.Laser1.TabStop = False
-        Me.Laser1.Visible = False
+        Me.lblLaser.BackColor = System.Drawing.Color.Red
+        Me.lblLaser.Location = New System.Drawing.Point(614, 425)
+        Me.lblLaser.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.lblLaser.Name = "lblLaser"
+        Me.lblLaser.Size = New System.Drawing.Size(15, 15)
+        Me.lblLaser.TabIndex = 5
+        Me.lblLaser.TabStop = False
+        Me.lblLaser.Visible = False
         '
-        'Laser2
+        'tmrLeft
         '
-        Me.Laser2.BackColor = System.Drawing.Color.Red
-        Me.Laser2.Location = New System.Drawing.Point(806, 480)
-        Me.Laser2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Laser2.Name = "Laser2"
-        Me.Laser2.Size = New System.Drawing.Size(15, 15)
-        Me.Laser2.TabIndex = 6
-        Me.Laser2.TabStop = False
-        Me.Laser2.Visible = False
-        '
-        'Laser3
-        '
-        Me.Laser3.BackColor = System.Drawing.Color.Red
-        Me.Laser3.Location = New System.Drawing.Point(830, 480)
-        Me.Laser3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Laser3.Name = "Laser3"
-        Me.Laser3.Size = New System.Drawing.Size(15, 15)
-        Me.Laser3.TabIndex = 7
-        Me.Laser3.TabStop = False
-        Me.Laser3.Visible = False
-        '
-        'Laser4
-        '
-        Me.Laser4.BackColor = System.Drawing.Color.Red
-        Me.Laser4.Location = New System.Drawing.Point(854, 480)
-        Me.Laser4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Laser4.Name = "Laser4"
-        Me.Laser4.Size = New System.Drawing.Size(15, 15)
-        Me.Laser4.TabIndex = 8
-        Me.Laser4.TabStop = False
-        Me.Laser4.Visible = False
-        '
-        'Laser5
-        '
-        Me.Laser5.BackColor = System.Drawing.Color.Red
-        Me.Laser5.Location = New System.Drawing.Point(782, 505)
-        Me.Laser5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Laser5.Name = "Laser5"
-        Me.Laser5.Size = New System.Drawing.Size(15, 15)
-        Me.Laser5.TabIndex = 9
-        Me.Laser5.TabStop = False
-        Me.Laser5.Visible = False
+        Me.tmrLeft.Interval = 1
         '
         'tmrRight
         '
+        Me.tmrRight.Interval = 1
+        '
+        'tmrUp
+        '
+        Me.tmrUp.Interval = 1
+        '
+        'tmrDown
+        '
+        Me.tmrDown.Interval = 1
         '
         'timLshoot
         '
+        Me.timLshoot.Interval = 1
         '
-        'PictureBox5
+        'timRshoot
         '
-        Me.PictureBox5.BackColor = System.Drawing.Color.Black
-        Me.PictureBox5.Location = New System.Drawing.Point(82, 69)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(78, 62)
-        Me.PictureBox5.TabIndex = 10
-        Me.PictureBox5.TabStop = False
+        Me.timRshoot.Interval = 1
         '
-        'PictureBox6
+        'timUshoot
         '
-        Me.PictureBox6.BackColor = System.Drawing.Color.Black
-        Me.PictureBox6.Location = New System.Drawing.Point(82, 185)
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(78, 62)
-        Me.PictureBox6.TabIndex = 11
-        Me.PictureBox6.TabStop = False
+        Me.timUshoot.Interval = 1
         '
-        'PictureBox7
+        'timDshoot
         '
-        Me.PictureBox7.BackColor = System.Drawing.Color.Black
-        Me.PictureBox7.Location = New System.Drawing.Point(82, 297)
-        Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(78, 62)
-        Me.PictureBox7.TabIndex = 12
-        Me.PictureBox7.TabStop = False
+        Me.timDshoot.Interval = 1
         '
-        'PictureBox8
+        'picEnemy1
         '
-        Me.PictureBox8.BackColor = System.Drawing.Color.Black
-        Me.PictureBox8.Location = New System.Drawing.Point(82, 423)
-        Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(78, 62)
-        Me.PictureBox8.TabIndex = 13
-        Me.PictureBox8.TabStop = False
+        Me.picEnemy1.ImageLocation = "D:\Accounting-Practice\VB.Net Game\WindowsApp1\Resources\enemy.png"
+        Me.picEnemy1.Location = New System.Drawing.Point(398, 58)
+        Me.picEnemy1.Name = "picEnemy1"
+        Me.picEnemy1.Size = New System.Drawing.Size(147, 162)
+        Me.picEnemy1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picEnemy1.TabIndex = 10
+        Me.picEnemy1.TabStop = False
         '
-        'PictureBox9
+        'picEnemy4
         '
-        Me.PictureBox9.BackColor = System.Drawing.Color.Black
-        Me.PictureBox9.Location = New System.Drawing.Point(82, 564)
-        Me.PictureBox9.Name = "PictureBox9"
-        Me.PictureBox9.Size = New System.Drawing.Size(78, 62)
-        Me.PictureBox9.TabIndex = 14
-        Me.PictureBox9.TabStop = False
+        Me.picEnemy4.ImageLocation = "D:\Accounting-Practice\VB.Net Game\WindowsApp1\Resources\enemy.png"
+        Me.picEnemy4.Location = New System.Drawing.Point(1270, 58)
+        Me.picEnemy4.Name = "picEnemy4"
+        Me.picEnemy4.Size = New System.Drawing.Size(147, 162)
+        Me.picEnemy4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picEnemy4.TabIndex = 11
+        Me.picEnemy4.TabStop = False
         '
-        'PictureBox10
+        'picEnemy3
         '
-        Me.PictureBox10.BackColor = System.Drawing.Color.Black
-        Me.PictureBox10.Location = New System.Drawing.Point(82, 682)
-        Me.PictureBox10.Name = "PictureBox10"
-        Me.PictureBox10.Size = New System.Drawing.Size(78, 62)
-        Me.PictureBox10.TabIndex = 15
-        Me.PictureBox10.TabStop = False
+        Me.picEnemy3.ImageLocation = "D:\Accounting-Practice\VB.Net Game\WindowsApp1\Resources\enemy.png"
+        Me.picEnemy3.Location = New System.Drawing.Point(968, 58)
+        Me.picEnemy3.Name = "picEnemy3"
+        Me.picEnemy3.Size = New System.Drawing.Size(147, 162)
+        Me.picEnemy3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picEnemy3.TabIndex = 12
+        Me.picEnemy3.TabStop = False
         '
-        'PictureBox11
+        'picEnemy2
         '
-        Me.PictureBox11.BackColor = System.Drawing.Color.Black
-        Me.PictureBox11.Location = New System.Drawing.Point(82, 810)
-        Me.PictureBox11.Name = "PictureBox11"
-        Me.PictureBox11.Size = New System.Drawing.Size(78, 62)
-        Me.PictureBox11.TabIndex = 16
-        Me.PictureBox11.TabStop = False
+        Me.picEnemy2.ImageLocation = "D:\Accounting-Practice\VB.Net Game\WindowsApp1\Resources\enemy.png"
+        Me.picEnemy2.Location = New System.Drawing.Point(666, 58)
+        Me.picEnemy2.Name = "picEnemy2"
+        Me.picEnemy2.Size = New System.Drawing.Size(147, 162)
+        Me.picEnemy2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picEnemy2.TabIndex = 13
+        Me.picEnemy2.TabStop = False
         '
-        'PictureBox12
+        'tmrOpp1
         '
-        Me.PictureBox12.BackColor = System.Drawing.Color.Black
-        Me.PictureBox12.Location = New System.Drawing.Point(82, 936)
-        Me.PictureBox12.Name = "PictureBox12"
-        Me.PictureBox12.Size = New System.Drawing.Size(78, 62)
-        Me.PictureBox12.TabIndex = 17
-        Me.PictureBox12.TabStop = False
+        Me.tmrOpp1.Interval = 1
         '
-        'Timer1
+        'tmrOpp2
         '
+        Me.tmrOpp2.Interval = 1
+        '
+        'tmrOpp3
+        '
+        Me.tmrOpp3.Interval = 1
+        '
+        'tmrOpp4
+        '
+        Me.tmrOpp4.Interval = 1
+        '
+        'tmrOppLasers
+        '
+        Me.tmrOppLasers.Enabled = True
+        Me.tmrOppLasers.Interval = 1
+        '
+        'ArenaExit
+        '
+        Me.ArenaExit.BackColor = System.Drawing.Color.Transparent
+        Me.ArenaExit.ImageLocation = "D:\Accounting-Practice\VB.Net Game\WindowsApp1\Resources\arena_door.png"
+        Me.ArenaExit.Location = New System.Drawing.Point(-3, 425)
+        Me.ArenaExit.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.ArenaExit.Name = "ArenaExit"
+        Me.ArenaExit.Size = New System.Drawing.Size(122, 180)
+        Me.ArenaExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ArenaExit.TabIndex = 14
+        Me.ArenaExit.TabStop = False
+        '
+        'tmrExitCol
+        '
+        Me.tmrExitCol.Enabled = True
+        Me.tmrExitCol.Interval = 1
+        '
+        'Timer2
+        '
+        Me.Timer2.Enabled = True
+        Me.Timer2.Interval = 1
         '
         'Arena
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1770, 1050)
-        Me.Controls.Add(Me.PictureBox12)
-        Me.Controls.Add(Me.PictureBox11)
-        Me.Controls.Add(Me.PictureBox10)
-        Me.Controls.Add(Me.PictureBox9)
-        Me.Controls.Add(Me.PictureBox8)
-        Me.Controls.Add(Me.PictureBox7)
-        Me.Controls.Add(Me.PictureBox6)
-        Me.Controls.Add(Me.PictureBox5)
-        Me.Controls.Add(Me.Laser5)
-        Me.Controls.Add(Me.Laser4)
-        Me.Controls.Add(Me.Laser3)
-        Me.Controls.Add(Me.Laser2)
-        Me.Controls.Add(Me.Laser1)
+        Me.ClientSize = New System.Drawing.Size(1473, 789)
+        Me.Controls.Add(Me.ArenaExit)
+        Me.Controls.Add(Me.picEnemy2)
+        Me.Controls.Add(Me.picEnemy3)
+        Me.Controls.Add(Me.picEnemy4)
+        Me.Controls.Add(Me.picEnemy1)
+        Me.Controls.Add(Me.lblLaser)
         Me.Controls.Add(Me.Character)
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.PictureBox3)
@@ -288,19 +264,12 @@ Partial Class Arena
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Character, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Laser1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Laser2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Laser3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Laser4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Laser5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblLaser, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picEnemy1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picEnemy4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picEnemy3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picEnemy2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ArenaExit, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -310,11 +279,7 @@ Partial Class Arena
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents Character As PictureBox
-    Friend WithEvents Laser1 As PictureBox
-    Friend WithEvents Laser2 As PictureBox
-    Friend WithEvents Laser3 As PictureBox
-    Friend WithEvents Laser4 As PictureBox
-    Friend WithEvents Laser5 As PictureBox
+    Friend WithEvents lblLaser As PictureBox
     Friend WithEvents tmrLeft As Timer
     Friend WithEvents tmrRight As Timer
     Friend WithEvents tmrUp As Timer
@@ -323,13 +288,17 @@ Partial Class Arena
     Friend WithEvents timRshoot As Timer
     Friend WithEvents timUshoot As Timer
     Friend WithEvents timDshoot As Timer
-    Friend WithEvents PictureBox5 As PictureBox
-    Friend WithEvents PictureBox6 As PictureBox
-    Friend WithEvents PictureBox7 As PictureBox
-    Friend WithEvents PictureBox8 As PictureBox
-    Friend WithEvents PictureBox9 As PictureBox
-    Friend WithEvents PictureBox10 As PictureBox
-    Friend WithEvents PictureBox11 As PictureBox
-    Friend WithEvents PictureBox12 As PictureBox
+    Friend WithEvents picEnemy1 As PictureBox
+    Friend WithEvents picEnemy4 As PictureBox
+    Friend WithEvents picEnemy3 As PictureBox
+    Friend WithEvents picEnemy2 As PictureBox
+    Friend WithEvents tmrOpp1 As Timer
+    Friend WithEvents tmrOpp2 As Timer
+    Friend WithEvents tmrOpp3 As Timer
+    Friend WithEvents tmrOpp4 As Timer
+    Friend WithEvents tmrOppLasers As Timer
+    Friend WithEvents ArenaExit As PictureBox
+    Friend WithEvents tmrExitCol As Timer
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents Timer2 As Timer
 End Class

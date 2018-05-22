@@ -57,3 +57,5 @@ F:\Accounting-Practice\VB.Net Game\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1
 F:\Accounting-Practice\VB.Net Game\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.Arena.resources
 D:\Accounting-Practice\VB.Net Game\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.CharSelect.resources
 D:\Accounting-Practice\VB.Net Game\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.Arena.resources
+F:\Accounting-Practice\VB.Net Game\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.Form2.resources
+D:\Accounting-Practice\VB.Net Game\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.Form2.resources

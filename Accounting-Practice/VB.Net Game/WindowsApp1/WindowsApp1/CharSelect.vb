@@ -50,7 +50,8 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Arena.check = 1
+
+        Form1.Avatar.name = InputBox("What is your initials?")
         Form1.Show()
         Form1.Ply.ImageLocation = picAvatar.ImageLocation
         Me.Hide()

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Ply = New System.Windows.Forms.PictureBox()
@@ -47,6 +47,9 @@ Partial Class Form1
         Me.PictureBox10 = New System.Windows.Forms.PictureBox()
         Me.PictureBox11 = New System.Windows.Forms.PictureBox()
         Me.timArenaCol = New System.Windows.Forms.Timer(Me.components)
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.Leaderboard = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Chest = New System.Windows.Forms.PictureBox()
         CType(Me.Ply, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -61,6 +64,8 @@ Partial Class Form1
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip1.SuspendLayout()
+        CType(Me.Chest, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Ply
@@ -127,7 +132,7 @@ Partial Class Form1
         'PictureBox4
         '
         Me.PictureBox4.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.PictureBox4.Location = New System.Drawing.Point(-106, -669)
+        Me.PictureBox4.Location = New System.Drawing.Point(-225, -662)
         Me.PictureBox4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(2946, 725)
@@ -174,7 +179,8 @@ Partial Class Form1
         '
         'PictureBox5
         '
-        Me.PictureBox5.ImageLocation = "D:\Accounting-Practice\VB.Net Game\WindowsApp1\Resources\wide_building.jpg"
+        Me.PictureBox5.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox5.ImageLocation = "D:\Accounting-Practice\VB.Net Game\WindowsApp1\Resources\wide_building.png"
         Me.PictureBox5.Location = New System.Drawing.Point(676, 48)
         Me.PictureBox5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox5.Name = "PictureBox5"
@@ -185,7 +191,7 @@ Partial Class Form1
         '
         'PictureBox6
         '
-        Me.PictureBox6.ImageLocation = "F:\Accounting-Practice\VB.Net Game\WindowsApp1\Resources\wide_building.jpg"
+        Me.PictureBox6.ImageLocation = "D:\Accounting-Practice\VB.Net Game\WindowsApp1\Resources\wide_building.png"
         Me.PictureBox6.Location = New System.Drawing.Point(38, 629)
         Me.PictureBox6.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox6.Name = "PictureBox6"
@@ -196,7 +202,7 @@ Partial Class Form1
         '
         'PictureBox7
         '
-        Me.PictureBox7.ImageLocation = "F:\Accounting-Practice\VB.Net Game\WindowsApp1\Resources\wide_building.jpg"
+        Me.PictureBox7.ImageLocation = "D:\Accounting-Practice\VB.Net Game\WindowsApp1\Resources\wide_building.png"
         Me.PictureBox7.Location = New System.Drawing.Point(38, 497)
         Me.PictureBox7.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox7.Name = "PictureBox7"
@@ -207,7 +213,7 @@ Partial Class Form1
         '
         'PictureBox8
         '
-        Me.PictureBox8.ImageLocation = "F:\Accounting-Practice\VB.Net Game\WindowsApp1\Resources\wide_building.jpg"
+        Me.PictureBox8.ImageLocation = "D:\Accounting-Practice\VB.Net Game\WindowsApp1\Resources\wide_building.png"
         Me.PictureBox8.Location = New System.Drawing.Point(1590, 48)
         Me.PictureBox8.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox8.Name = "PictureBox8"
@@ -218,7 +224,7 @@ Partial Class Form1
         '
         'PictureBox9
         '
-        Me.PictureBox9.ImageLocation = "F:\Accounting-Practice\VB.Net Game\WindowsApp1\Resources\wide_building.jpg"
+        Me.PictureBox9.ImageLocation = "D:\Accounting-Practice\VB.Net Game\WindowsApp1\Resources\wide_building.png"
         Me.PictureBox9.Location = New System.Drawing.Point(1952, 48)
         Me.PictureBox9.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox9.Name = "PictureBox9"
@@ -229,7 +235,7 @@ Partial Class Form1
         '
         'PictureBox10
         '
-        Me.PictureBox10.ImageLocation = "D:\Accounting-Practice\VB.Net Game\WindowsApp1\Resources\wide_building.jpg"
+        Me.PictureBox10.ImageLocation = "D:\Accounting-Practice\VB.Net Game\WindowsApp1\Resources\wide_building.png"
         Me.PictureBox10.Location = New System.Drawing.Point(1264, 48)
         Me.PictureBox10.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox10.Name = "PictureBox10"
@@ -240,7 +246,7 @@ Partial Class Form1
         '
         'PictureBox11
         '
-        Me.PictureBox11.ImageLocation = "F:\Accounting-Practice\VB.Net Game\WindowsApp1\Resources\wide_building.jpg"
+        Me.PictureBox11.ImageLocation = "D:\Accounting-Practice\VB.Net Game\WindowsApp1\Resources\wide_building.png"
         Me.PictureBox11.Location = New System.Drawing.Point(38, 366)
         Me.PictureBox11.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox11.Name = "PictureBox11"
@@ -254,11 +260,41 @@ Partial Class Form1
         Me.timArenaCol.Enabled = True
         Me.timArenaCol.Interval = 2
         '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(24, 24)
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Leaderboard})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(9, 3, 0, 3)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1019, 35)
+        Me.MenuStrip1.TabIndex = 14
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'Leaderboard
+        '
+        Me.Leaderboard.Name = "Leaderboard"
+        Me.Leaderboard.Size = New System.Drawing.Size(124, 29)
+        Me.Leaderboard.Text = "Leaderboard"
+        '
+        'Chest
+        '
+        Me.Chest.BackColor = System.Drawing.Color.Transparent
+        Me.Chest.ImageLocation = "D:\Accounting-Practice\VB.Net Game\WindowsApp1\Resources\chest.png"
+        Me.Chest.Location = New System.Drawing.Point(2250, 72)
+        Me.Chest.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Chest.Name = "Chest"
+        Me.Chest.Size = New System.Drawing.Size(123, 120)
+        Me.Chest.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.Chest.TabIndex = 15
+        Me.Chest.TabStop = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1924, 1050)
+        Me.ClientSize = New System.Drawing.Size(1019, 546)
+        Me.Controls.Add(Me.Chest)
         Me.Controls.Add(Me.PictureBox11)
         Me.Controls.Add(Me.PictureBox10)
         Me.Controls.Add(Me.PictureBox9)
@@ -273,6 +309,8 @@ Partial Class Form1
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Ply)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Form1"
         Me.Text = "Form1"
@@ -290,7 +328,11 @@ Partial Class Form1
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
+        CType(Me.Chest, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -318,9 +360,7 @@ Partial Class Form1
     Friend WithEvents PictureBox10 As PictureBox
     Friend WithEvents PictureBox11 As PictureBox
     Friend WithEvents timArenaCol As Timer
-    Friend WithEvents PictureBox12 As PictureBox
-    Friend WithEvents Timer1 As Timer
-    Friend WithEvents PictureBox13 As PictureBox
-    Friend WithEvents PictureBox14 As PictureBox
-    Friend WithEvents PictureBox15 As PictureBox
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents Leaderboard As ToolStripMenuItem
+    Friend WithEvents Chest As PictureBox
 End Class
