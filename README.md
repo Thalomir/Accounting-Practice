@@ -1,3 +1,3 @@
-# Accounting-Practice
+# RPG Game
 
-This is a fun RPG-type game, hidden under the covers of an Accounting-Practice.
+This is a fun RPG-type game with lots of characters
